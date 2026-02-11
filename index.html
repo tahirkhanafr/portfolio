@@ -1,24 +1,88 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tahir Khan | Portfolio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
     <style>
-        body { font-family: sans-serif; text-align: center; padding: 50px; background: #f4f4f4; }
-        .card { background: white; padding: 20px; border-radius: 10px; display: inline-block; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-        h1 { color: #333; }
-        p { color: #666; }
-        .links a { margin: 10px; text-decoration: none; color: blue; font-weight: bold; }
+        :root { --bg: #0f172a; --card: #1e293b; --text: #f8fafc; --primary: #38bdf8; --secondary: #94a3b8; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.6; }
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+        
+        /* Header Section */
+        header { text-align: center; margin-bottom: 60px; }
+        .profile-img { width: 120px; height: 120px; border-radius: 50%; border: 3px solid var(--primary); margin-bottom: 20px; }
+        h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .tagline { color: var(--primary); font-weight: 600; font-size: 1.1rem; }
+        
+        /* Sections */
+        section { margin-bottom: 50px; }
+        h2 { border-left: 4px solid var(--primary); padding-left: 15px; margin-bottom: 25px; font-size: 1.5rem; }
+        
+        /* Grid Layout for Skills/Projects */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .card { background: var(--card); padding: 25px; border-radius: 12px; transition: transform 0.3s ease; }
+        .card:hover { transform: translateY(-5px); border: 1px solid var(--primary); }
+        .card h3 { color: var(--primary); margin-bottom: 10px; }
+        
+        /* Links & Buttons */
+        .social-links { margin-top: 20px; }
+        .social-links a { color: var(--text); font-size: 1.5rem; margin: 0 10px; transition: 0.3s; }
+        .social-links a:hover { color: var(--primary); }
+        
+        .btn { display: inline-block; background: var(--primary); color: var(--bg); padding: 10px 25px; 
+               border-radius: 50px; text-decoration: none; font-weight: bold; margin-top: 20px; }
     </style>
 </head>
 <body>
-    <div class="card">
+
+<div class="container">
+    <header>
+        <img src="https://ui-avatars.com/api/?name=Tahir+Khan&background=38bdf8&color=fff&size=128" alt="Tahir Khan" class="profile-img">
         <h1>Tahir Khan</h1>
-        <p>Welcome to my professional portfolio.</p>
-        <div class="links">
-            <a href="#">My Resume</a>
-            <a href="#">My Projects</a>
-            <a href="mailto:your-email@gmail.com">Contact Me</a>
+        <p class="tagline">Aspiring Developer & Logic Architect</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:tahir@example.com"><i class="fas fa-envelope"></i></a>
         </div>
-    </div>
+        <a href="#" class="btn">Download CV</a>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am focused on building clean, efficient, and logical digital solutions. My goal is to bridge the gap between complex problems and user-friendly interfaces.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Key Projects</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Project One</h3>
+                <p>A brief description of a cool project you built. Explain the problem you solved.</p>
+            </div>
+            <div class="card">
+                <h3>Project Two</h3>
+                <p>Another impressive piece of work. Highlight the tools you used (HTML, CSS, JS).</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Expertise</h2>
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));">
+            <div class="card" style="text-align:center;">Web Development</div>
+            <div class="card" style="text-align:center;">Logic Design</div>
+            <div class="card" style="text-align:center;">UI/UX Design</div>
+        </div>
+    </section>
+
+    <footer style="text-align: center; margin-top: 50px; color: var(--secondary); font-size: 0.9rem;">
+        &copy; 2026 Tahir Khan. Built for free with GitHub Pages.
+    </footer>
+</div>
+
 </body>
 </html>
